@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPRI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Add Testing Form -->
+<h2 class="headings">Add Testing Record</h2>
+<form action="insert_record.php" method="POST">
+    <label for="product_id">Product ID:</label>
+    <input type="text" id="product_id" name="product_id" required>
+
+    <label for="testing_type">Testing Type:</label>
+    <input type="text" id="testing_type" name="testing_type" required>
+
+    <label for="testing_performed">Testing Performed:</label>
+    <textarea id="testing_performed" name="testing_performed" required></textarea>
+
+    <label for="remarks">Remarks:</label>
+    <textarea id="remarks" name="remarks"></textarea>
+
+    <label for="result">Result (Passed/Failed):</label>
+    <input type="text" id="result" name="result" required>
+
+    <label for="tester_name">Tester Name:</label>
+    <input type="text" id="tester_name" name="tester_name" required>
+
+    <label for="revision">Revision:</label>
+    <input type="text" id="revision" name="revision" value="1" required>
+
+    <input type="submit" name="submit_testing" value="Add Testing Record">
+</form>
+
+<!-- Advanced Search Form -->
+<h2 class="headings">Advanced Search</h2>
+<form class="advanced-search" action="search_results.php" method="GET">
+    <label for="search_type">Search By:</label>
+    <select id="search_type" name="search_type">
+        <option value="product_id">Product ID</option>
+        <option value="tester_name">Tester Name</option>
+        <option value="status">Testing Status</option>
+    </select>
+
+    <label for="search_value">Search Value:</label>
+    <input type="text" id="search_value" name="search_value" required>
+
+    <input type="submit" value="Search">
+</form>
+</body>
+</html>
